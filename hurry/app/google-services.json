@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "617511159743",
+    "firebase_url": "https://paintsplat-14964.firebaseio.com",
+    "project_id": "paintsplat-14964",
+    "storage_bucket": "paintsplat-14964.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617511159743:android:998253df2a4efabebb430a",
+        "android_client_info": {
+          "package_name": "com.example.hurry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617511159743-790fvkbqucgsm9figtdbmbp1dpcfktae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQXCreQtYfVxH6v0uQG2WBqJMiBjjAGVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617511159743-790fvkbqucgsm9figtdbmbp1dpcfktae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
