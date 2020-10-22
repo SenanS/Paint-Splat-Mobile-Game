@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 881, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
   vertical: 0
-  controlID: 20
+  controlID: 43
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 276
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 0
     width: 259
     height: 676
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 21
+  controlID: 48
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 22
+  controlID: 49
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,8 +298,8 @@ MonoBehaviour:
     y: 0
     width: 944
     height: 676
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -333,16 +333,67 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
-    - {fileID: 8660786981738905773, guid: 9d2b4ec48d75f8743abbe306879b1da4, type: 2}
+    - {fileID: 6312017459564959268, guid: b25884112c4785b4093f1793bae29c01, type: 2}
+    - {fileID: 4995491894118467009, guid: 261b64348983a1743bc4d51a725661ab, type: 2}
+    - {fileID: 9069677811903501195, guid: 52064e32f7d826f4fbbd40ce6671f059, type: 2}
+    - {fileID: -6355375796827096829, guid: dffa2ec8f0439fc4993fcde587958b35, type: 2}
     m_ValueSerializationHelper:
-    - e00: 1
+    - e00: 0.5936842
       e01: 0
       e02: 0
-      e03: 0
+      e03: -14.684204
       e10: 0
-      e11: 1
+      e11: 0.5936842
       e12: 0
-      e13: 0
+      e13: 257.53683
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.5936842
+      e01: 0
+      e02: 0
+      e03: -14.684204
+      e10: 0
+      e11: 0.5936842
+      e12: 0
+      e13: 257.53683
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.5936842
+      e01: 0
+      e02: 0
+      e03: -14.684204
+      e10: 0
+      e11: 0.5936842
+      e12: 0
+      e13: 257.53683
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.39541727
+      e01: 0
+      e02: 0
+      e03: 18.512344
+      e10: 0
+      e11: 0.39541727
+      e12: 0
+      e13: 328.71182
       e20: 0
       e21: 0
       e22: 1
@@ -352,9 +403,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 9d2b4ec48d75f8743abbe306879b1da4, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: dffa2ec8f0439fc4993fcde587958b35, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 8660786981738905773, guid: 9d2b4ec48d75f8743abbe306879b1da4, type: 2}
+  - m_Target: {fileID: -6355375796827096829, guid: dffa2ec8f0439fc4993fcde587958b35, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -405,20 +456,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/FireAnimation
+    - Assets/Scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/FireAnimation
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GithubDesktop\CS7CS3---Project-1\Group15_UnityProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec3c0000
-    m_LastClickedID: 15596
+    m_SelectedIDs: ee3c0000
+    m_LastClickedID: 15598
     m_ExpandedIDs: 00000000e83c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -569,23 +620,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4af8ffff
-      m_LastClickedID: -1974
-      m_ExpandedIDs: 5afbffff
+      m_SelectedIDs: c04b0000
+      m_LastClickedID: 19392
+      m_ExpandedIDs: 66c3ffff88c3ffffb2c3ffff54ccffff1acdffffb2cdffffc4cdffff24ceffff38ceffff70cfffff5afbffff283c0000ae4b0000085b0d23
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Image
+        m_OriginalName: Image
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -13218
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -631,9 +682,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 61.370667, y: 43.819824, z: -18.95725}
     speed: 2
-    m_Value: {x: -0.00000006861417, y: -0.000000049062646, z: -0.00000011020688}
+    m_Value: {x: 61.370667, y: 43.819824, z: -18.95725}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -684,9 +735,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.7144851
+    m_Target: 100.04538
     speed: 2
-    m_Value: 0.71448624
+    m_Value: 100.04538
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -704,7 +755,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.24868818, y: 0.6539715, z: -0.24191703, w: -0.6722753}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
