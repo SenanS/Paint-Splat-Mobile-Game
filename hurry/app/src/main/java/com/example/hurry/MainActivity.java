@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         playerRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                //success on continung to the next screen after saving player name
+                //success on continuing to the next screen after saving player name
                 if(!playerName.equals("")){
                     SharedPreferences preferences = getSharedPreferences("PREFS",0);
                     SharedPreferences.Editor editor = preferences.edit();

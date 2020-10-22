@@ -58,14 +58,16 @@ public class MainActivity2 extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                button.setText("Creating Room");
+               /* button.setText("Creating Room");
                 button.setEnabled(false);
-                roomName = playerName;
+                roomName = "Testing";
                 roomRef = database.getReference("rooms/" + roomName + "/player1");
                 addRoomEventListener();
-                roomRef.setValue(playerName);
-
-
+                roomRef.setValue(playerName);*/
+                Intent intent =  new Intent(getApplicationContext(),MainActivity4.class);
+                intent.putExtra("playerName", playerName);
+                startActivity(intent);
+                finish();
             }
         });
 
