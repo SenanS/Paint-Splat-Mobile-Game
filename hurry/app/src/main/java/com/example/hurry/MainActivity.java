@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         SharedPreferences preferences = getSharedPreferences("PREFS", 0);
-        playerName = preferences.getString("playerName", "");
+       // playerName = preferences.getString("playerName", "");
 
         if(!playerName.equals("")){
             playerRef = database.getReference("players/"+ playerName);

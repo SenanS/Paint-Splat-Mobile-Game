@@ -50,7 +50,7 @@ public class MainActivity2 extends AppCompatActivity {
         roomName = playerName;
 
         listView = findViewById(R.id.listview);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.button2);
 
         roomList = new ArrayList<>();
 
@@ -80,6 +80,7 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         });
+        //show if new room is available
         addRoomsEventListener();
     }
 
@@ -87,6 +88,7 @@ public class MainActivity2 extends AppCompatActivity {
         roomRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //join the room
                 button.setText("Create Room");
                 button.setEnabled(true);
                 Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
@@ -96,6 +98,7 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                //error
                 button.setText("Create Room");
                 button.setEnabled(true);
                 Toast.makeText(MainActivity2.this, "ERROR", Toast.LENGTH_SHORT).show();
@@ -128,7 +131,7 @@ public class MainActivity2 extends AppCompatActivity {
 
            @Override
            public void onCancelled(@NonNull DatabaseError error) {
-
+                //error - nothing
            }
        });
 
