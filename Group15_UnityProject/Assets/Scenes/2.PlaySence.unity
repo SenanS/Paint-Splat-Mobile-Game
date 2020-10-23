@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 492984343}
   - component: {fileID: 492984342}
   m_Layer: 5
-  m_Name: VirtualJoyStick&Sight
+  m_Name: MainGameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
