@@ -27,9 +27,9 @@ public class VJPlayer : MonoBehaviour
     {
 
         //Initialization of boundaries
-        xMax = Screen.width-35; // I used 50 because the size of player is 100*100
-        xMin = 35;
-        yMax = Screen.height-35 ;
-        yMin = 200;
+        xMax = Screen.width-25; // I used 50 because the size of player is 100*100
+        xMin = 25;
+        yMax = Screen.height-25 ;
+        yMin = 185;
     }
 }
