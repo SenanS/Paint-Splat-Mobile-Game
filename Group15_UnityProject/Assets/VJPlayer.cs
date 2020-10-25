@@ -17,7 +17,6 @@ public class VJPlayer : MonoBehaviour
 
         if (direction.magnitude != 0)
         {
-
             transform.position += direction * moveSpeed;
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, xMin, xMax), Mathf.Clamp(transform.position.y, yMin, yMax), 0f);//to restric movement of player
         }

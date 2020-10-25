@@ -40,8 +40,8 @@
     //对参数赋值
     void Change()
     {
-        stopTime = Random.Range(0, 1.5f);
-        moveTime = Random.Range(2, 3.5f);
+        stopTime = Random.Range(0, 1f);
+        moveTime = Random.Range(2, 3.4f);
         //vel_x = Random.Range(1, 10);
         //vel_y = Random.Range(1, 10);
         //stopTime = 0;
