@@ -31,6 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
     Button button;
 
     List<String> roomList;
+    List<String> playerList;
 
     String playerName = "";
     String roomName = "";
@@ -38,6 +39,7 @@ public class MainActivity2 extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference roomRef;
     DatabaseReference roomsRef;
+
 
 
     @Override
@@ -54,6 +56,7 @@ public class MainActivity2 extends AppCompatActivity {
         button = findViewById(R.id.button2);
 
         roomList = new ArrayList<>();
+        playerList = new ArrayList<>();
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -80,10 +83,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 roomName = roomList.get(position);
-                //roomRef = database.getReference("rooms/" + roomName + "/player2");
                 roomsRef = database.getReference("rooms/"+roomName);
-                //addRoomEventListener();
-                //roomRef.setValue(playerName);
 
                 roomsRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -160,12 +160,30 @@ public class MainActivity2 extends AppCompatActivity {
                roomList.clear();
                Iterable<DataSnapshot> rooms = dataSnapshot.getChildren();
                for(DataSnapshot snapshot:rooms){
-                   roomList.add(snapshot.getKey());
+                   roomsRef = database.getReference("rooms/"+roomName);
 
-                   ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity2.this,
-                           android.R.layout.simple_list_item_1,roomList);
-                   listView.setAdapter(adapter);
-               }
+                   roomsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                       @Override
+                       public void onDataChange(@NonNull DataSnapshot snapshot) {
+                           playerList.clear();
+                           for (DataSnapshot Snapshot : snapshot.getChildren()) {
+                               playerList.add(snapshot.getValue().toString());
+                           }
+
+                           if (playerList.size() != 5) {
+                               roomList.add(snapshot.getKey());
+                               ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity2.this,
+                                       android.R.layout.simple_list_item_1, roomList);
+                               listView.setAdapter(adapter);
+                           }
+                       }
+
+
+                       @Override
+                       public void onCancelled(@NonNull DatabaseError error) {
+
+                       }
+               });
            }
 
            @Override
