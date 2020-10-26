@@ -17,6 +17,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -71,14 +72,50 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
+
+        final ArrayList<String> list = new ArrayList<>();
+        String test;
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 roomName = roomList.get(position);
-                roomRef = database.getReference("rooms/" + roomName + "/player2");
-                addRoomEventListener();
-                roomRef.setValue(playerName);
+                //roomRef = database.getReference("rooms/" + roomName + "/player2");
+                roomsRef = database.getReference("rooms/"+roomName);
+                //addRoomEventListener();
+                //roomRef.setValue(playerName);
 
+                roomsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        list.clear();
+                        for(DataSnapshot Snapshot : snapshot.getChildren()){
+                            list.add(snapshot.getValue().toString());
+                        }
+
+                        if(list.size()==2){
+                            roomRef = database.getReference("rooms/" + roomName + "/player2");
+                            addRoomEventListener();
+                            roomRef.setValue(playerName);
+                        }
+                        if(list.size()==3){
+                            roomRef = database.getReference("rooms/" + roomName + "/player3");
+                            addRoomEventListener();
+                            roomRef.setValue(playerName);
+                        }
+
+                        if(list.size()==4){
+                            roomRef = database.getReference("rooms/" + roomName + "/player4");
+                            addRoomEventListener();
+                            roomRef.setValue(playerName);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
 
             }
         });
