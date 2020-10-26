@@ -36,11 +36,9 @@ public class MainActivity4 extends AppCompatActivity {
         createRoomButton = findViewById(R.id.createRoomButton);
 
         database = FirebaseDatabase.getInstance();
-<<<<<<< Updated upstream
         //SharedPreferences preferences = getSharedPreferences("PREFS", 0);
         //playerName = preferences.getString("playerName", "");
-=======
->>>>>>> Stashed changes
+
         playerName = getIntent().getStringExtra("playerName");
 
         createRoomButton.setOnClickListener(new View.OnClickListener() {
