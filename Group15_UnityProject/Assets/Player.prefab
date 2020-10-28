@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1178226316377984710}
   - component: {fileID: 8380552678721789068}
   m_Layer: 0
-  m_Name: PinkPlayer
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +150,70 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   i: 0
-  TracePrefab: {fileID: 677768089645375399, guid: e9f9a2280d9244141a8b51c61c1a474e, type: 3}
-  TraceSpawn: {fileID: 5631121925881325194}
+  TracePrefab: {fileID: 7465546555569624862, guid: e9f9a2280d9244141a8b51c61c1a474e, type: 3}
   ButtonState: 0
+  XArray:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  YArray:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  z:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  Traces: []
+  MyTrace: {fileID: 0}

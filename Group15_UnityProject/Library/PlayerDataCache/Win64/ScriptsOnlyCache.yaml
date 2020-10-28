@@ -93,27 +93,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13134}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13636}
     - Class: 114
-      Script: {instanceID: 14348}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 14368}
+      Script: {instanceID: 14350}
     - Class: 114
-      Script: {instanceID: 14846}
+      Script: {instanceID: 14370}
     - Class: 114
-      Script: {instanceID: 14940}
+      Script: {instanceID: 14848}
     - Class: 114
-      Script: {instanceID: 15190}
+      Script: {instanceID: 14942}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 15192}
     - Class: 114
-      Script: {instanceID: 15242}
+      Script: {instanceID: 15212}
     - Class: 114
-      Script: {instanceID: 15588}
+      Script: {instanceID: 15244}
     - Class: 114
-      Script: {instanceID: 15650}
+      Script: {instanceID: 15590}
     - Class: 114
-      Script: {instanceID: 24332}
+      Script: {instanceID: 15652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -603,13 +603,19 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
+      Hash: f1dc6e6a312b6f8f5cc555a947d4f81a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonIsClicked
+  - hash:
+      serializedVersion: 2
       Hash: b5cdb5258d55ddfa2beedfa44db3e720
     assemblyName: Mirror.Authenticators.dll
     namespaceName: Mirror.Authenticators
     className: BasicAuthenticator
   - hash:
       serializedVersion: 2
-      Hash: 46069c0c93445d8fd977ace41764629f
+      Hash: f7c062d039b5f56e223906cb7478b578
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtomClick
@@ -1129,12 +1135,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: f1dc6e6a312b6f8f5cc555a947d4f81a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtonIsClicked
   platform: 19
   scenePathNames:
   - Assets/Scenes/3.PlaySence.unity
