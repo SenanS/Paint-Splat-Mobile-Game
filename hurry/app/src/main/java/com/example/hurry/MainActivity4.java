@@ -38,6 +38,7 @@ public class MainActivity4 extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         //SharedPreferences preferences = getSharedPreferences("PREFS", 0);
         //playerName = preferences.getString("playerName", "");
+
         playerName = getIntent().getStringExtra("playerName");
 
         createRoomButton.setOnClickListener(new View.OnClickListener() {
