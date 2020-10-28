@@ -2,12 +2,14 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-
+/// <summary>
+/// Control the player's position
+/// Nothing needs to change
+/// </summary>
 public class VJStick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler{
 
     private Image jsContainer;
     private Image joystick;
-
     public Vector3 InputDirection;
 
     void Start(){
@@ -19,7 +21,6 @@ public class VJStick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerD
 
     public void OnDrag(PointerEventData ped) {
         Vector2 position = Vector2.zero;
-
         //To get InputDirection
         RectTransformUtility.ScreenPointToLocalPointInRectangle
                 (jsContainer.rectTransform,

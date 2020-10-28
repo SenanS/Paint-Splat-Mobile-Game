@@ -1,71 +1,101 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using Mirror;
 
-public class ButtomClick : MonoBehaviour
+public class ButtomClick : NetworkBehaviour
 {
-    public VJPlayer CrossHair;
     public int i = 0;
+    public GameObject TracePrefab;
+    public Transform TraceSpawn;
+    ButtonIsClicked Buttonflag;
+    public bool ButtonState=false;
     float[] XArray = new float[20];
     float[] YArray = new float[20];
-    //float timeCounter;
-    public void Click() {
-        Invoke("judgeandshoot", 0.2f);       
+
+    void Update() {
+        if (isLocalPlayer == false) {
+            return;
+        }
+        //GameObject Button = GameObject.Find("Button");
+        Buttonflag = (ButtonIsClicked)GameObject.Find("Button").GetComponent("ButtonIsClicked");//this is a bool, if 
+        if (Buttonflag.ButtonState)
+        {
+            //CmdShoot();
+            Cmdjudgeandshoot();
+            Buttonflag.ButtonState = false;
+        }
+
     }
 
+    //[Command]
+    //public void CmdShoot()
+    //{
 
-    public void judgeandshoot()
-    {   
+    //    GameObject container = GameObject.Find("MovingTile");    
+    //    GameObject Trace = Instantiate(TracePrefab, TraceSpawn.position, TraceSpawn.rotation) as GameObject;
+    //    //Trace.transform.parent = container.transform;
+    //    //Trace.transform.Translate(container.transform.position);
+    //    NetworkServer.Spawn(Trace);
+
+    //}
+
+    [Command]// This function run in the host, whenever which client press the button, host will run this function
+    public void Cmdjudgeandshoot()
+    {
+        
+        GameObject container = GameObject.Find("MovingTile");
         bool flag = false;
-        if (CrossHair.transform.position.x < transform.position.x + 92 && CrossHair.transform.position.x > transform.position.x - 92
-       && CrossHair.transform.position.y < transform.position.y + 52 && CrossHair.transform.position.y > transform.position.y - 65)
+        if (this.transform.position.x < container.transform.position.x + 92 && transform.position.x > container.transform.position.x - 92
+       && transform.position.y < container.transform.position.y + 52 && transform.position.y > container.transform.position.y - 65)
         {
-            for (int m = 0; m <= i; m++) {
-                if (CrossHair.transform.position.x <= XArray[m] + 20 && CrossHair.transform.position.x >= XArray[m] - 20
-                    && CrossHair.transform.position.y <= YArray[m] + 20 && CrossHair.transform.position.y >= YArray[m] - 20)
+
+            for (int m = 0; m <= i; m++)
+            {
+                if (this.transform.position.x <= XArray[m] + 20 && this.transform.position.x >= XArray[m] - 20
+                    && this.transform.position.y <= YArray[m] + 20 && this.transform.position.y >= YArray[m] - 20)
                 {
-                    //print("这块有人射过了！！！");
                     flag = true;
-                    GameObject Failed = GameObject.Find("Failed!!");
+                    GameObject Failed = GameObject.Find("Failed!!");//Show the hint, but it just show in the host
                     GameObject FailedInstance = Instantiate(Failed);
                     FailedInstance.transform.position = new Vector2(190, 140);
                     FailedInstance.transform.localScale = new Vector2(50, 50);
-                    //delete word
                     Destroy(FailedInstance, 1.0f);
                 }
             }
 
-            if (!flag) { 
-                print("You Shoot It!!!");
-                GameObject container = GameObject.Find("MovingTile");
-                GameObject Tracy = GameObject.Find("PurpleTracy");
-                GameObject Instance = Instantiate(Tracy);
-                Instance.transform.parent = container.transform;
-                Instance.transform.position = CrossHair.transform.position;
-                Instance.transform.localScale = new Vector2(0.1f, 0.1f);                                    
-                XArray[i] = CrossHair.transform.position.x;
-                YArray[i] = CrossHair.transform.position.y;
-                //print("坐标为：" + XArray[i]+","+YArray[i]);
-                i =i+1;
+            if (!flag)//you shoot it successful
+            {
+                print("You Shoot It!!!");                    
+                GameObject Trace = Instantiate(TracePrefab, TraceSpawn.position, TraceSpawn.rotation) as GameObject;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////               
+                //Trace.transform.parent = container.transform;//If want the trace follow the tile , cancel this cite and let the trace be the child of the tile(continer is the moving tile)
+                //Trace.transform.Translate(container.transform.position);
+                NetworkServer.Spawn(Trace);              
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                GameObject Great= GameObject.Find("Great!!");
-                GameObject GreatInstance = Instantiate(Great);                
+                XArray[i] = this.transform.position.x;
+                YArray[i] = this.transform.position.y;
+                i = i + 1;
+                GameObject Great = GameObject.Find("Great!!");//Show the hint, but it just show in the host
+                GameObject GreatInstance = Instantiate(Great);
                 GreatInstance.transform.position = new Vector2(190, 140);
-                GreatInstance.transform.localScale = new Vector2(50, 50);
-                //delete word
-                Destroy(GreatInstance,1.0f);
+                GreatInstance.transform.localScale = new Vector2(50, 50);             
+                Destroy(GreatInstance, 1.0f);
             }
         }
         else
         {
             print("You Miss It!!");
-            GameObject Missed = GameObject.Find("Missed!!");
+            GameObject Missed = GameObject.Find("Missed!!");//Show the hint, but it just show in the host
             GameObject MissedInstance = Instantiate(Missed);
             MissedInstance.transform.position = new Vector2(190, 140);
-            MissedInstance.transform.localScale = new Vector2(50, 50);
-            //delete word
+            MissedInstance.transform.localScale = new Vector2(50, 50);   
             Destroy(MissedInstance, 1.0f);
         }
     }
 
+
 }
+

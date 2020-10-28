@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
- using System.Collections;
- public class RandomMove : MonoBehaviour
+using System.Collections;
+/// <summary>
+/// This Script control the Tile move randomly
+/// Nothing needs to change 
+/// </summary>
+public class RandomMove : MonoBehaviour
 {
     float stopTime;//暂停时间
     float moveTime;//移动时间
@@ -41,6 +45,7 @@
     void Change()
     {
         stopTime = Random.Range(0, 1f);
+        //moveTime = 0;
         moveTime = Random.Range(2, 3.4f);
         //vel_x = Random.Range(1, 10);
         //vel_y = Random.Range(1, 10);
