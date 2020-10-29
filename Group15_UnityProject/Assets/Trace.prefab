@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7465546555569624858}
   - component: {fileID: 7465546555569624859}
   - component: {fileID: 7465546555569624856}
+  - component: {fileID: 1651549544784062123}
   m_Layer: 0
   m_Name: Trace
   m_TagString: Untagged
@@ -118,3 +119,15 @@ MonoBehaviour:
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
+--- !u!114 &1651549544784062123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465546555569624862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd6bae062474774d9b1f5a6dfd6f1ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
