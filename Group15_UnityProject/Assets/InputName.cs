@@ -9,10 +9,14 @@ using UnityEngine.UI;
 
 public class InputName : MonoBehaviour
 {
+<<<<<<< Updated upstream
 
     public string player_name = "";
     
 
+=======
+    public string name;
+>>>>>>> Stashed changes
     void Start()
     {
 
@@ -33,7 +37,11 @@ public class InputName : MonoBehaviour
     {
 
         print("User Name:" + inp);
+<<<<<<< Updated upstream
         player_name = inp;
+=======
+        name = inp;
+>>>>>>> Stashed changes
 
     }
 

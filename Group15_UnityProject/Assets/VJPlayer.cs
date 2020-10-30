@@ -26,9 +26,7 @@ public class VJPlayer : NetworkBehaviour
             return;
         }
         GameObject JoyStickHandler =  GameObject.Find("JoyStickHandler");
-        jsMovement = (VJStick)JoyStickHandler.GetComponent("VJStick");
-
-        
+        jsMovement = (VJStick)JoyStickHandler.GetComponent("VJStick");       
         direction = jsMovement.InputDirection; //InputDirection can be used as per the need of your project
 
         if (direction.magnitude != 0)
