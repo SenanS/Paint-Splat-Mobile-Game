@@ -84,39 +84,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11964}
     - Class: 114
-      Script: {instanceID: 12044}
+      Script: {instanceID: 12200}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12278}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 13072}
     - Class: 114
-      Script: {instanceID: 13074}
+      Script: {instanceID: 13134}
     - Class: 114
-      Script: {instanceID: 13136}
+      Script: {instanceID: 13636}
     - Class: 114
-      Script: {instanceID: 13638}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 14350}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 14370}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 14848}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 14942}
     - Class: 114
-      Script: {instanceID: 14944}
+      Script: {instanceID: 15192}
     - Class: 114
-      Script: {instanceID: 15194}
+      Script: {instanceID: 15212}
     - Class: 114
-      Script: {instanceID: 15214}
+      Script: {instanceID: 15244}
     - Class: 114
-      Script: {instanceID: 15246}
+      Script: {instanceID: 15590}
     - Class: 114
-      Script: {instanceID: 15592}
+      Script: {instanceID: 15652}
     - Class: 114
-      Script: {instanceID: 15654}
+      Script: {instanceID: 16568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -178,12 +178,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkManagerHUD
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FollowTheTile
   - hash:
       serializedVersion: 2
       Hash: 192ca9716d03752ea1d90a78bc2daac9
@@ -408,7 +402,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 1df5043f0424ac97346ea8f965958921
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InputName
@@ -624,7 +618,7 @@ ScriptsOnlyBuild:
     className: BasicAuthenticator
   - hash:
       serializedVersion: 2
-      Hash: 5084e3f63b464f1db069610c623cefa0
+      Hash: 7edaf8285b87c5eba4f95fc9656d394f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtomClick
@@ -1144,6 +1138,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowTheTile
   platform: 19
   scenePathNames:
   - Assets/Scenes/3.PlaySence.unity
