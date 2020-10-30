@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
+
+
 public class InputName : MonoBehaviour
 {
+
+    public string player_name = "";
+    
 
     void Start()
     {
@@ -26,6 +33,7 @@ public class InputName : MonoBehaviour
     {
 
         print("User Name:" + inp);
+        player_name = inp;
 
     }
 
