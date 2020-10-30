@@ -754,7 +754,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   player_name: 
+=======
+  name: 
+>>>>>>> Stashed changes
 =======
   name: 
 >>>>>>> Stashed changes
