@@ -20,22 +20,14 @@ public class EnterSenceMenu : MonoBehaviour
 
         if (player_name.Length > 0)
         {
-            SceneManager.LoadScene("1.Menu");//level1为我们要切换到的场景
+            SceneManager.LoadScene("1.Menu");
         }
         rend = GameObject.Find("Warning Sprite").GetComponent<Renderer>();
         rend.enabled = true;
         //GameObject.Find("Warning").Renderer<>(true);
 
-
-
-
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 }
 

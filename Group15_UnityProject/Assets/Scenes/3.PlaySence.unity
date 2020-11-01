@@ -1328,12 +1328,18 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 5159314625106498199, guid: f347370b549602a478746cfca39df7ee, type: 3}
+  playerPrefab: {fileID: 3589914101364073211, guid: f347370b549602a478746cfca39df7ee, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 7465546555569624862, guid: e9f9a2280d9244141a8b51c61c1a474e, type: 3}
-  - {fileID: 5194859303977942770, guid: ee38be87803f4a1449f76cd5df5b50e5, type: 3}
+  - {fileID: 4626761699359297858, guid: 2f06cfbd1bc953744b27223b70e90d5c, type: 3}
+  - {fileID: 3650477975584398628, guid: d2debec35398bd147b52076ef88a81c0, type: 3}
+  - {fileID: 3771038294996278206, guid: 6137d7f9e559d6f4eb7bfeae2ed75b63, type: 3}
+  - {fileID: 3589914101364073211, guid: f347370b549602a478746cfca39df7ee, type: 3}
+  - {fileID: 2204663110744686428, guid: 5a856efe38aaaa44f9b30b86cf2171a7, type: 3}
+  - {fileID: 9103772798018094926, guid: d90c8673720b43f41b0a9813d32b0414, type: 3}
+  - {fileID: 2273124811539588756, guid: b9b2a310b5dc2ec45a9326715b1728f0, type: 3}
 --- !u!4 &1718878388
 Transform:
   m_ObjectHideFlags: 0

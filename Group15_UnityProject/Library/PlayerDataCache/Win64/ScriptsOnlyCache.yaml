@@ -1,9 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ButtomClick
     - ButtonIsClicked
     - FollowTheTile
+    - Player1Fire
     - RandomMove
     - VJPlayer
     - VJStick
@@ -84,39 +84,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11964}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12202}
     - Class: 114
-      Script: {instanceID: 13026}
+      Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13028}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 13136}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13638}
     - Class: 114
-      Script: {instanceID: 14350}
+      Script: {instanceID: 14352}
     - Class: 114
-      Script: {instanceID: 14370}
+      Script: {instanceID: 14372}
     - Class: 114
-      Script: {instanceID: 14848}
+      Script: {instanceID: 14850}
     - Class: 114
-      Script: {instanceID: 14942}
+      Script: {instanceID: 14944}
     - Class: 114
-      Script: {instanceID: 15192}
+      Script: {instanceID: 15194}
     - Class: 114
-      Script: {instanceID: 15212}
+      Script: {instanceID: 15214}
     - Class: 114
-      Script: {instanceID: 15244}
+      Script: {instanceID: 15246}
     - Class: 114
-      Script: {instanceID: 15590}
+      Script: {instanceID: 15592}
     - Class: 114
-      Script: {instanceID: 15652}
+      Script: {instanceID: 15654}
     - Class: 114
-      Script: {instanceID: 16568}
+      Script: {instanceID: 21438}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -178,6 +178,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkManagerHUD
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowTheTile
   - hash:
       serializedVersion: 2
       Hash: 192ca9716d03752ea1d90a78bc2daac9
@@ -402,7 +408,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4b070a4b7d0953c1f9c1c92d11baa841
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InputName
@@ -616,12 +622,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Authenticators.dll
     namespaceName: Mirror.Authenticators
     className: BasicAuthenticator
-  - hash:
-      serializedVersion: 2
-      Hash: 7edaf8285b87c5eba4f95fc9656d394f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtomClick
   - hash:
       serializedVersion: 2
       Hash: 220bd265f54cc4cee8f1539ad2b2c64a
@@ -1140,10 +1140,28 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 165800ec52b6f2a5fa7e52b28156b1d8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FollowTheTile
+    className: Player1Fire
+  - hash:
+      serializedVersion: 2
+      Hash: 7939ecf531ad7e71d59b828fd5ba7d8f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player2Fire
+  - hash:
+      serializedVersion: 2
+      Hash: ccf21d618244862262f8a4186abb2005
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player3Fire
+  - hash:
+      serializedVersion: 2
+      Hash: 9425199467bd0a2494975ff2a376d164
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player4Fire
   platform: 19
   scenePathNames:
   - Assets/Scenes/3.PlaySence.unity

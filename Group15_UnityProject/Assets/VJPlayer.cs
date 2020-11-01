@@ -13,11 +13,11 @@ public class VJPlayer : NetworkBehaviour
     public float moveSpeed = 05f;
     VJStick jsMovement;
 
-    private Vector3 direction;
+    //private Vector3 direction;
     private float xMin, xMax, yMin, yMax;
 
-    [SyncVar(hook = nameof(SetColor))]
-    Color PlayerColor = Color.black;
+    //[SyncVar(hook = nameof(SetColor))]
+    //Color PlayerColor = Color.black;
 
     void Update()
     {
@@ -25,11 +25,13 @@ public class VJPlayer : NetworkBehaviour
         {
             return;
         }
-        GameObject JoyStickHandler =  GameObject.Find("JoyStickHandler");
-        jsMovement = (VJStick)JoyStickHandler.GetComponent("VJStick");
+        //GameObject JoyStickHandler =  GameObject.Find("JoyStickHandler");
+        //jsMovement = (VJStick)JoyStickHandler.GetComponent("VJStick");
+        //GameObject JoyStickHandler = GameObject.Find("JoyStickHandler");
+        jsMovement = (VJStick)GameObject.Find("JoyStickHandler").GetComponent("VJStick");
 
-        
-        direction = jsMovement.InputDirection; //InputDirection can be used as per the need of your project
+
+        Vector3 direction = jsMovement.InputDirection; //InputDirection can be used as per the need of your project
 
         if (direction.magnitude != 0)
         {
@@ -40,7 +42,7 @@ public class VJPlayer : NetworkBehaviour
 
     void Start()
     {
-        PlayerColor = new Color(Random.Range(0, 255) / 255f, Random.Range(0, 255) / 255f, Random.Range(0, 255) / 255f);      
+        //PlayerColor = new Color(Random.Range(0, 255) / 255f, Random.Range(0, 255) / 255f, Random.Range(0, 255) / 255f);      
         //Initialization of boundaries
         xMax = Screen.width - 25; // I used 50 because the size of player is 100*100
         xMin = 25;
@@ -48,12 +50,9 @@ public class VJPlayer : NetworkBehaviour
         yMin = 185;
     }
 
-    //private void SetColor(Color PlayerColor, Color color)
+
+    //void SetColor(Color oldColor, Color newColor)
     //{
-    //    GetComponent<SpriteRenderer>().color = color;
+    //    GetComponent<SpriteRenderer>().color = newColor;
     //}
-    void SetColor(Color oldColor, Color newColor)
-    {
-        GetComponent<SpriteRenderer>().color = newColor;
-    }
 }
