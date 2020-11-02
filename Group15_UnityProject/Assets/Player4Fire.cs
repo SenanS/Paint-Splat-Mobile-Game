@@ -7,9 +7,12 @@ using Mirror;
 public class Player4Fire : NetworkBehaviour
 {
     public GameObject TracePrefab;
+    public GameObject Great;
+    public GameObject Fail;
+    public GameObject Miss;
     ButtonIsClicked Buttonflag;
     public bool ButtonState = false;
-    public List<GameObject> Player4Traces = new List<GameObject>();
+
     void Update()
     {
         if (isLocalPlayer == false)
@@ -19,136 +22,76 @@ public class Player4Fire : NetworkBehaviour
         Buttonflag = (ButtonIsClicked)GameObject.Find("Button").GetComponent("ButtonIsClicked");//this is a bool, if 
         if (Buttonflag.ButtonState)
         {
-            bool Flag = Judge();
-            if (Flag)
-            {
-                CmdGenerateTrace();
-                Flag = false;
-            }
+            Judge();
             Buttonflag.ButtonState = false;
         }
 
     }
 
-    [Command]
+   
     void CmdGenerateTrace()
     {
+        GameObject container = GameObject.Find("MovingTile");
+        List<GameObject> TracesLists = ((RandomMove)container.GetComponent("RandomMove")).TracesList;
         GameObject Trace = Instantiate(TracePrefab, this.transform.position, this.transform.rotation) as GameObject;
         NetworkServer.Spawn(Trace);
-        Player4Traces.Add(Trace);
+        TracesLists.Add(Trace);
+        print(TracesLists.Count);
     }
 
-    bool Judge()
+    [Command]
+    void Judge()
     {
         GameObject container = GameObject.Find("MovingTile");
-
+        List<GameObject> TracesLists = ((RandomMove)container.GetComponent("RandomMove")).TracesList;
         if (this.transform.position.x < container.transform.position.x + 92 && transform.position.x > container.transform.position.x - 92
        && transform.position.y < container.transform.position.y + 52 && transform.position.y > container.transform.position.y - 65)
         {
-
-            if (Player2HaveShootedHere()) { GeneralFailHint(); return false; }
-
-            if (Player3HaveShootedHere()) { GeneralFailHint(); return false; }
-
-            if (Player1HaveShootedHere()) { GeneralFailHint(); return false; }
-
-            for (int m = 0; m < Player4Traces.Count; m++)
+            for (int m = 0; m < TracesLists.Count; m++)
             {
-                if (this.transform.position.x <= Player4Traces[m].transform.position.x + 20 && this.transform.position.x >= Player4Traces[m].transform.position.x - 20
-                    && this.transform.position.y <= Player4Traces[m].transform.position.y + 20 && this.transform.position.y >= Player4Traces[m].transform.position.y - 20)
+                if (this.transform.position.x <= TracesLists[m].transform.position.x + 20 && this.transform.position.x >= TracesLists[m].transform.position.x - 20
+                    && this.transform.position.y <= TracesLists[m].transform.position.y + 20 && this.transform.position.y >= TracesLists[m].transform.position.y - 20)
                 {
-                    GeneralFailHint();
-                    return false;
+                    GeneralFailHint();                  
+                    return;
                 }
             }
             GeneralSuccessHint();
-            return true;
+            CmdGenerateTrace();
+            return;
         }
         else
         {
             GeneralMissHint();
-            return false;
+            return;
 
         }
     }
 
     void GeneralSuccessHint()
     {
-        GameObject Great = GameObject.Find("Great!!");
         GameObject GreatInstance = Instantiate(Great);
         GreatInstance.transform.position = new Vector2(190, 140);
         GreatInstance.transform.localScale = new Vector2(50, 50);
+        NetworkServer.Spawn(GreatInstance);
         Destroy(GreatInstance, 1.0f);
     }
     void GeneralMissHint()
     {
-        GameObject Missed = GameObject.Find("Missed!!");
-        GameObject MissedInstance = Instantiate(Missed);
+        GameObject MissedInstance = Instantiate(Miss);
         MissedInstance.transform.position = new Vector2(190, 140);
         MissedInstance.transform.localScale = new Vector2(50, 50);
+        NetworkServer.Spawn(MissedInstance);
         Destroy(MissedInstance, 1.0f);
     }
 
     void GeneralFailHint()
     {
-        GameObject Failed = GameObject.Find("Failed!!");
-        GameObject FailedInstance = Instantiate(Failed);
+        GameObject FailedInstance = Instantiate(Fail);
         FailedInstance.transform.position = new Vector2(190, 140);
         FailedInstance.transform.localScale = new Vector2(50, 50);
+        NetworkServer.Spawn(FailedInstance);
         Destroy(FailedInstance, 1.0f);
     }
-
-    bool Player2HaveShootedHere()
-    {
-        if (GameObject.Find("Player#2"))
-        {
-            List<GameObject> Player2Traces = ((Player2Fire)GameObject.Find("Player#2").GetComponent("Player2Fire")).Player2Traces;
-            for (int m = 0; m < Player2Traces.Count; m++)
-            {
-                if (this.transform.position.x <= Player2Traces[m].transform.position.x + 20 && this.transform.position.x >= Player2Traces[m].transform.position.x - 20
-                    && this.transform.position.y <= Player2Traces[m].transform.position.y + 20 && this.transform.position.y >= Player2Traces[m].transform.position.y - 20)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    bool Player3HaveShootedHere()
-    {
-        if (GameObject.Find("Player#3"))
-        {
-            List<GameObject> Player3Traces = ((Player3Fire)GameObject.Find("Player#3").GetComponent("Player3Fire")).Player3Traces;
-            for (int m = 0; m < Player3Traces.Count; m++)
-            {
-                if (this.transform.position.x <= Player3Traces[m].transform.position.x + 20 && this.transform.position.x >= Player3Traces[m].transform.position.x - 20
-                    && this.transform.position.y <= Player3Traces[m].transform.position.y + 20 && this.transform.position.y >= Player3Traces[m].transform.position.y - 20)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    bool Player1HaveShootedHere()
-    {
-        if (GameObject.Find("Player#1"))
-        {
-            List<GameObject> Player1Traces = ((Player1Fire)GameObject.Find("Player#1").GetComponent("Player1Fire")).Player1Traces;
-            for (int m = 0; m < Player1Traces.Count; m++)
-            {
-                if (this.transform.position.x <= Player1Traces[m].transform.position.x + 20 && this.transform.position.x >= Player1Traces[m].transform.position.x - 20
-                    && this.transform.position.y <= Player1Traces[m].transform.position.y + 20 && this.transform.position.y >= Player1Traces[m].transform.position.y - 20)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-
 
 }

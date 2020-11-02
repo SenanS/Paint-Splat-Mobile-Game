@@ -150,5 +150,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   TracePrefab: {fileID: 7465546555569624862, guid: e9f9a2280d9244141a8b51c61c1a474e, type: 3}
+  Great: {fileID: 7885437170748128199, guid: 5ff651839f1b6c34394e03f8223dba36, type: 3}
+  Fail: {fileID: 3124524208637475680, guid: dbe9f8d1e3aed9f42908ac0ae7395e72, type: 3}
+  Miss: {fileID: 1436856179002152460, guid: fd4dd5b2958bce3409e89436b9e9d5de, type: 3}
   ButtonState: 0
-  Player1Traces: []

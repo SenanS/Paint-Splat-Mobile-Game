@@ -4,6 +4,9 @@ ScriptsOnlyBuild:
     - ButtonIsClicked
     - FollowTheTile
     - Player1Fire
+    - Player2Fire
+    - Player3Fire
+    - Player4Fire
     - RandomMove
     - VJPlayer
     - VJStick
@@ -86,37 +89,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 13074}
+      Script: {instanceID: 12724}
     - Class: 114
-      Script: {instanceID: 13136}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 13638}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 13644}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 13712}
     - Class: 114
-      Script: {instanceID: 14944}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 15194}
+      Script: {instanceID: 14360}
     - Class: 114
-      Script: {instanceID: 15214}
+      Script: {instanceID: 14380}
     - Class: 114
-      Script: {instanceID: 15246}
+      Script: {instanceID: 14858}
     - Class: 114
-      Script: {instanceID: 15592}
+      Script: {instanceID: 14952}
     - Class: 114
-      Script: {instanceID: 15654}
+      Script: {instanceID: 15202}
     - Class: 114
-      Script: {instanceID: 21438}
+      Script: {instanceID: 15222}
+    - Class: 114
+      Script: {instanceID: 15254}
+    - Class: 114
+      Script: {instanceID: 15600}
+    - Class: 114
+      Script: {instanceID: 15662}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,6 +219,12 @@ ScriptsOnlyBuild:
     className: NetworkTransform
   - hash:
       serializedVersion: 2
+      Hash: 1dceb2b309572d2c50f1368bc048fd38
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player2Fire
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -220,12 +235,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
     className: Spawner
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player
   - hash:
       serializedVersion: 2
       Hash: 16a720ee1ef3f470f479041a1e75bdc1
@@ -304,6 +313,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnterGame
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -448,6 +463,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
     className: PixelPerfectCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 1dceb2b309572d2c50f1368bc048fd38
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player1Fire
   - hash:
       serializedVersion: 2
       Hash: 842c3d5f6a26b098df5d2ec35bc3fab4
@@ -642,6 +663,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 1dceb2b309572d2c50f1368bc048fd38
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player4Fire
+  - hash:
+      serializedVersion: 2
       Hash: e87f50864f8a979f1228e8c69bd62658
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Pong
@@ -712,6 +739,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
     className: RandomColor
+  - hash:
+      serializedVersion: 2
+      Hash: 1dceb2b309572d2c50f1368bc048fd38
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player3Fire
   - hash:
       serializedVersion: 2
       Hash: 8996336a1113af80862107545b719922
@@ -960,7 +993,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ae342a7b1f3637d7b59368699776f188
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RandomMove
@@ -1138,30 +1171,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 165800ec52b6f2a5fa7e52b28156b1d8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player1Fire
-  - hash:
-      serializedVersion: 2
-      Hash: 7939ecf531ad7e71d59b828fd5ba7d8f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player2Fire
-  - hash:
-      serializedVersion: 2
-      Hash: ccf21d618244862262f8a4186abb2005
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player3Fire
-  - hash:
-      serializedVersion: 2
-      Hash: 9425199467bd0a2494975ff2a376d164
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player4Fire
   platform: 19
   scenePathNames:
   - Assets/Scenes/3.PlaySence.unity

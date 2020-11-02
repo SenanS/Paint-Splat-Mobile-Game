@@ -1,11 +1,16 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Networking;
+using Mirror;
 /// <summary>
 /// This Script control the Tile move randomly
 /// Nothing needs to change 
 /// </summary>
-public class RandomMove : MonoBehaviour
+public class RandomMove : NetworkBehaviour
 {
+    [SyncVar]
+    public List<GameObject> TracesList = new List<GameObject>();
     float stopTime;//暂停时间
     float moveTime;//移动时间
     float vel_x, vel_y;//速度
