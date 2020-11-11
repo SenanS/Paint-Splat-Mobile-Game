@@ -11,6 +11,8 @@ public class RandomMove : NetworkBehaviour
 {
     [SyncVar]
     public List<GameObject> TracesList = new List<GameObject>();
+    public int[] PointArray = new int[] { 0, 0, 0, 0 };
+
     float stopTime;//暂停时间
     float moveTime;//移动时间
     float vel_x, vel_y;//速度

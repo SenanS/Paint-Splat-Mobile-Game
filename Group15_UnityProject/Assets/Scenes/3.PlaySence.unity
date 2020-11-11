@@ -798,6 +798,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   TracesList: []
+  PointArray: 00000000000000000000000000000000
 --- !u!95 &1650481561
 Animator:
   serializedVersion: 3
