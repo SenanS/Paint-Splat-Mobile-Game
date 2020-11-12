@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ButtonIsClicked
     - FollowTheTile
+    - NetworkManagerSplat
     - Player1Fire
     - Player2Fire
     - Player3Fire
@@ -14,7 +15,6 @@ ScriptsOnlyBuild:
     - Mirror.NetworkTransform
     Mirror.dll:
     - Mirror.NetworkIdentity
-    - Mirror.NetworkManager
     - Mirror.NetworkManagerHUD
     - Mirror.TelepathyTransport
     Unity.2D.Animation.Editor.dll:
@@ -91,8 +91,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12202}
-    - Class: 114
       Script: {instanceID: 12280}
     - Class: 114
       Script: {instanceID: 12722}
@@ -113,19 +111,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14378}
     - Class: 114
-      Script: {instanceID: 14856}
+      Script: {instanceID: 14394}
     - Class: 114
-      Script: {instanceID: 14950}
+      Script: {instanceID: 14858}
     - Class: 114
-      Script: {instanceID: 15200}
+      Script: {instanceID: 14952}
     - Class: 114
-      Script: {instanceID: 15220}
+      Script: {instanceID: 15202}
     - Class: 114
-      Script: {instanceID: 15252}
+      Script: {instanceID: 15222}
     - Class: 114
-      Script: {instanceID: 15598}
+      Script: {instanceID: 15254}
     - Class: 114
-      Script: {instanceID: 15660}
+      Script: {instanceID: 15600}
+    - Class: 114
+      Script: {instanceID: 15662}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -855,6 +855,12 @@ ScriptsOnlyBuild:
     className: ApiUpdater
   - hash:
       serializedVersion: 2
+      Hash: b2b4a4bf81317f3c08703a1773162a08
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetworkManagerSplat
+  - hash:
+      serializedVersion: 2
       Hash: f3a8ccc18ad656ac8993b34a1b30984f
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -993,7 +999,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: a3eb2257094b6ee5ef15439da4b78bc1
+      Hash: 7419aae0e04b9b41f2f336af00fb8f1c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RandomMove
@@ -1174,5 +1180,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/3.PlaySence.unity
-  playerPath: D:/GithubDesktop/CS7CS3---Project-1/Group15_UnityProject/TestBuilding/Project
-    (1).exe
+  playerPath: D:/Code/CS7CS3---Project-1/Group15_UnityProject/Builds/Project (1).exe
