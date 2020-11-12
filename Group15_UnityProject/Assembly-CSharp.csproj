@@ -66,9 +66,9 @@
     <Compile Include="Assets\ButtonIsClicked.cs" />
     <Compile Include="Assets\Player4Fire.cs" />
     <Compile Include="Assets\Player3Fire.cs" />
+    <Compile Include="Assets\NetworkManagerSplat.cs" />
     <Compile Include="Assets\RandomMove.cs" />
     <Compile Include="Assets\VJStick.cs" />
-    <Compile Include="Assets\NetworkManagerSplat.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
