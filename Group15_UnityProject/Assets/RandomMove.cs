@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using Mirror;
 /// <summary>
 /// This Script control the Tile move randomly
 /// Nothing needs to change 
 /// </summary>
+
 public class RandomMove : NetworkBehaviour
 {
-    [SyncVar]
+    //[SyncVar]
     public List<GameObject> TracesList = new List<GameObject>();
-    public int[] PointArray = new int[] { 0, 0, 0, 0 };
+    [SyncVar]
+    float timeCounter;//Game counter
+
 
     float stopTime;//暂停时间
     float moveTime;//移动时间
@@ -21,6 +25,7 @@ public class RandomMove : NetworkBehaviour
     float maxPos_y = 465;
     float minPos_x = 92;
     float minPos_y = 240;
+    
     float timeCounter1;//移动的计时器
     float timeCounter2;//暂停的计时器
     void Start()
@@ -30,6 +35,14 @@ public class RandomMove : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeCounter += Time.deltaTime;
+        if (timeCounter >= 15) {//Set Gamelast seconds 
+            
+            SceneManager.LoadScene("4.ResultSence");
+        }
+        if (TracesList.Count == 15) {
+            SceneManager.LoadScene("4.ResultSence");
+        }
         timeCounter1 += Time.deltaTime;
         //如果移动的计时器小于移动时间，则进行移动，否则暂停计时器累加，当暂停计时器大于暂停时间时，重置
         if (timeCounter1 < moveTime)

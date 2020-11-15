@@ -2,15 +2,21 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ButtonIsClicked
+    - DonotDestoryOnLoad
     - FollowTheTile
     - NetworkManagerSplat
     - Player1Fire
+    - Player1Result
     - Player2Fire
+    - Player2Result
     - Player3Fire
+    - Player3Result
     - Player4Fire
+    - Player4Result
     - RandomMove
     - VJPlayer
     - VJStick
+    - pointarray
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     Mirror.dll:
@@ -52,6 +58,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/3.PlaySence.unity:
     - Class: 1
@@ -79,53 +86,57 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12342}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 12344}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12448}
+      Script: {instanceID: 11860}
     - Class: 114
-      Script: {instanceID: 12528}
+      Script: {instanceID: 11964}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12764}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 13206}
+      Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 12298}
     - Class: 114
-      Script: {instanceID: 13562}
+      Script: {instanceID: 12724}
     - Class: 114
-      Script: {instanceID: 13624}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 14124}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 14192}
+      Script: {instanceID: 13118}
     - Class: 114
-      Script: {instanceID: 14424}
+      Script: {instanceID: 13144}
     - Class: 114
-      Script: {instanceID: 14564}
+      Script: {instanceID: 13650}
     - Class: 114
-      Script: {instanceID: 14842}
+      Script: {instanceID: 13718}
     - Class: 114
-      Script: {instanceID: 14862}
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14878}
+      Script: {instanceID: 14366}
     - Class: 114
-      Script: {instanceID: 15342}
+      Script: {instanceID: 14386}
     - Class: 114
-      Script: {instanceID: 15432}
+      Script: {instanceID: 14402}
     - Class: 114
-      Script: {instanceID: 15680}
+      Script: {instanceID: 14870}
     - Class: 114
-      Script: {instanceID: 15700}
+      Script: {instanceID: 14964}
     - Class: 114
-      Script: {instanceID: 15732}
+      Script: {instanceID: 15214}
     - Class: 114
-      Script: {instanceID: 16076}
+      Script: {instanceID: 15234}
     - Class: 114
-      Script: {instanceID: 16138}
+      Script: {instanceID: 15268}
+    - Class: 114
+      Script: {instanceID: 15614}
+    - Class: 114
+      Script: {instanceID: 15676}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -144,7 +155,66 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    Assets/Scenes/4.ResultSence.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11860}
+    - Class: 114
+      Script: {instanceID: 12224}
+    - Class: 114
+      Script: {instanceID: 12280}
+    - Class: 114
+      Script: {instanceID: 13080}
+    - Class: 114
+      Script: {instanceID: 14676}
+    - Class: 114
+      Script: {instanceID: 14766}
+    - Class: 114
+      Script: {instanceID: 14870}
+    - Class: 114
+      Script: {instanceID: 15246}
+    - Class: 114
+      Script: {instanceID: 15614}
+    - Class: 114
+      Script: {instanceID: 15712}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: f087c23fbfa15475a0d110af46fb0496
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 016664814c823cfc5ac199e835dc335b
@@ -289,6 +359,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 196873d1ebd2333080a03c46662c9e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: pointarray
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -555,6 +631,12 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DonotDestoryOnLoad
+  - hash:
+      serializedVersion: 2
       Hash: 5cc439bf63c0539d39588e69465ac2ab
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -595,6 +677,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Tanks
     className: Tank
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FindPointArray
   - hash:
       serializedVersion: 2
       Hash: 9b01b1d80bd3ecf4eaca45e1a22d444e
@@ -703,12 +791,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: f087c23fbfa15475a0d110af46fb0496
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: 4c790fa3b7c93033baa4406ca5ac8c04
@@ -903,6 +985,12 @@ ScriptsOnlyBuild:
     className: NetworkManagerPong
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player2Result
+  - hash:
+      serializedVersion: 2
       Hash: 083eba9bfa137d3541591a9c79dea11a
     assemblyName: Mirror.dll
     namespaceName: Mirror
@@ -913,6 +1001,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player4Result
   - hash:
       serializedVersion: 2
       Hash: 8ad1d0e29b0c33d51fef91c19bee5603
@@ -999,10 +1093,16 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 7419aae0e04b9b41f2f336af00fb8f1c
+      Hash: ae342a7b1f3637d7b59368699776f188
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RandomMove
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player1Result
   - hash:
       serializedVersion: 2
       Hash: 2bca67b5b15bd74f4ed58264903bca65
@@ -1161,6 +1261,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player3Result
+  - hash:
+      serializedVersion: 2
       Hash: 4c790fa3b7c93033baa4406ca5ac8c04
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
@@ -1180,4 +1286,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/3.PlaySence.unity
+  - Assets/Scenes/4.ResultSence.unity
   playerPath: D:/GithubDesktop/CS7CS3---Project-1/Group15_UnityProject/Project (1).exe

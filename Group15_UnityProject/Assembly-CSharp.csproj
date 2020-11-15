@@ -57,17 +57,25 @@
   <ItemGroup>
      <Compile Include="Assets\FollowTheTile.cs" />
      <Compile Include="Assets\Player2Fire.cs" />
+     <Compile Include="Assets\pointarray.cs" />
      <Compile Include="Assets\EnterGame.cs" />
      <Compile Include="Assets\EnterSenceMenu.cs" />
      <Compile Include="Assets\InputName.cs" />
      <Compile Include="Assets\Player1Fire.cs" />
      <Compile Include="Assets\VJPlayer.cs" />
+     <Compile Include="Assets\DonotDestoryOnLoad.cs" />
+     <Compile Include="Assets\GlobePointArray.cs" />
+     <Compile Include="Assets\FindPointArray.cs" />
      <Compile Include="Assets\ButtonIsClicked.cs" />
      <Compile Include="Assets\Player4Fire.cs" />
      <Compile Include="Assets\Player3Fire.cs" />
      <Compile Include="Assets\NetworkManagerSplat.cs" />
+     <Compile Include="Assets\Player2Result.cs" />
+     <Compile Include="Assets\Player4Result.cs" />
      <Compile Include="Assets\RandomMove.cs" />
+     <Compile Include="Assets\Player1Result.cs" />
      <Compile Include="Assets\VJStick.cs" />
+     <Compile Include="Assets\Player3Result.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

@@ -33,9 +33,14 @@ public class Player1Fire : NetworkBehaviour
     {
         GameObject container = GameObject.Find("MovingTile");
         List<GameObject> TracesLists = ((RandomMove)container.GetComponent("RandomMove")).TracesList;
-        int[] PointL= ((RandomMove)container.GetComponent("RandomMove")).PointArray;
-        PointL[0]++;
-        print(PointL[0] + "," + PointL[1] + "," + PointL[2] + "," +PointL[3]);
+        SyncList<int> PL = ((pointarray)GameObject.Find("PointArray").GetComponent("pointarray")).PL;
+        PL[0]++;
+
+        int PL11 = ((pointarray)GameObject.Find("PointArray").GetComponent("pointarray")).PL1;
+        print(PL11);
+        PL11++;
+  
+      
         GameObject Trace = Instantiate(TracePrefab, this.transform.position, this.transform.rotation) as GameObject;
         NetworkServer.Spawn(Trace);
         TracesLists.Add(Trace);
