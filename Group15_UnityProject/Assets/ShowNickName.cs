@@ -7,8 +7,10 @@ public class ShowNickName : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string NickName = GlobeNickName.NickName;
-        this.GetComponent<Text>().text = NickName;
+
+        string NickNam = GlobeNickName.NickName;
+        print("NickName is:"+NickNam);
+        this.GetComponent<Text>().text = NickNam;
     }
 
 

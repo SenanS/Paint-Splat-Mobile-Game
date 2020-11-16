@@ -16,11 +16,12 @@ public class EnterSenceMenu : MonoBehaviour
 
     void OnClick()
     {
-        string player_name = GlobeNickName.NickName;
+        //string player_name = GlobeNickName.NickName;
 
-        if (player_name.Length > 0)
+        //if (player_name.Length > 0)
+        if(GlobeNickName.NickName.Length>0)
         {
-            SceneManager.LoadScene("1.Menu");
+            SceneManager.LoadScene("3.PlaySence");
         }
         rend = GameObject.Find("Warning Sprite").GetComponent<Renderer>();
         rend.enabled = true;

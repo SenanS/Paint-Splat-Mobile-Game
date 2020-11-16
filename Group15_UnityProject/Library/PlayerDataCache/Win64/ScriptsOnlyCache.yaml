@@ -3,7 +3,9 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ButtonIsClicked
     - DonotDestoryOnLoad
+    - EnterSenceMenu
     - FollowTheTile
+    - InputName
     - NetworkManagerSplat
     - Player1Fire
     - Player1Result
@@ -14,6 +16,7 @@ ScriptsOnlyBuild:
     - Player4Fire
     - Player4Result
     - RandomMove
+    - ShowNickName
     - VJPlayer
     - VJStick
     - pointarray
@@ -58,9 +61,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/3.PlaySence.unity:
+    Assets/Scenes/0.SetName.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -74,6 +78,85 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11826}
+    - Class: 114
+      Script: {instanceID: 11860}
+    - Class: 114
+      Script: {instanceID: 12044}
+    - Class: 114
+      Script: {instanceID: 12106}
+    - Class: 114
+      Script: {instanceID: 12224}
+    - Class: 114
+      Script: {instanceID: 12280}
+    - Class: 114
+      Script: {instanceID: 12374}
+    - Class: 114
+      Script: {instanceID: 12634}
+    - Class: 114
+      Script: {instanceID: 12724}
+    - Class: 114
+      Script: {instanceID: 13036}
+    - Class: 114
+      Script: {instanceID: 13082}
+    - Class: 114
+      Script: {instanceID: 13146}
+    - Class: 114
+      Script: {instanceID: 13716}
+    - Class: 114
+      Script: {instanceID: 14086}
+    - Class: 114
+      Script: {instanceID: 14306}
+    - Class: 114
+      Script: {instanceID: 14364}
+    - Class: 114
+      Script: {instanceID: 14384}
+    - Class: 114
+      Script: {instanceID: 14870}
+    - Class: 114
+      Script: {instanceID: 14964}
+    - Class: 114
+      Script: {instanceID: 15214}
+    - Class: 114
+      Script: {instanceID: 15268}
+    - Class: 114
+      Script: {instanceID: 15614}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/3.PlaySence.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -98,37 +181,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12106}
     - Class: 114
+      Script: {instanceID: 12224}
+    - Class: 114
       Script: {instanceID: 12280}
     - Class: 114
       Script: {instanceID: 12298}
     - Class: 114
       Script: {instanceID: 12724}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 12742}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 13144}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13650}
+      Script: {instanceID: 13648}
     - Class: 114
-      Script: {instanceID: 13718}
+      Script: {instanceID: 13716}
     - Class: 114
-      Script: {instanceID: 14088}
+      Script: {instanceID: 14086}
     - Class: 114
-      Script: {instanceID: 14366}
-    - Class: 114
-      Script: {instanceID: 14386}
-    - Class: 114
-      Script: {instanceID: 14402}
+      Script: {instanceID: 14400}
     - Class: 114
       Script: {instanceID: 14870}
     - Class: 114
       Script: {instanceID: 14964}
-    - Class: 114
-      Script: {instanceID: 15214}
     - Class: 114
       Script: {instanceID: 15234}
     - Class: 114
@@ -179,7 +258,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13082}
     - Class: 114
       Script: {instanceID: 14676}
     - Class: 114
@@ -541,6 +620,12 @@ ScriptsOnlyBuild:
     className: Player1Fire
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowNickName
+  - hash:
+      serializedVersion: 2
       Hash: 842c3d5f6a26b098df5d2ec35bc3fab4
     assemblyName: Mirror.dll
     namespaceName: Mirror.Logging
@@ -677,12 +762,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Tanks
     className: Tank
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FindPointArray
   - hash:
       serializedVersion: 2
       Hash: 9b01b1d80bd3ecf4eaca45e1a22d444e
@@ -985,6 +1064,12 @@ ScriptsOnlyBuild:
     className: NetworkManagerPong
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GlobeNickName
+  - hash:
+      serializedVersion: 2
       Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1285,6 +1370,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
+  - Assets/Scenes/0.SetName.unity
   - Assets/Scenes/3.PlaySence.unity
   - Assets/Scenes/4.ResultSence.unity
   playerPath: D:/GithubDesktop/CS7CS3---Project-1/Group15_UnityProject/Project (1).exe

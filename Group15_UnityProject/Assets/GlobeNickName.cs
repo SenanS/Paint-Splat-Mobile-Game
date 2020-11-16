@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class GlobeNickName : MonoBehaviour
 {
-    public static string NickName=" ";
+    public static string NickName="";
 }
