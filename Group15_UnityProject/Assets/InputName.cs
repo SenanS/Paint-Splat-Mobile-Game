@@ -11,7 +11,7 @@ public class InputName : MonoBehaviour
 {
 
     public string player_name = "";
-    
+    string NickName = GlobeNickName.NickName;
 
     void Start()
     {
@@ -33,7 +33,8 @@ public class InputName : MonoBehaviour
     {
 
         print("User Name:" + inp);
-        player_name = inp;
+        NickName = inp;
+        print(NickName);
 
     }
 

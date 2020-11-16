@@ -16,7 +16,7 @@ public class EnterSenceMenu : MonoBehaviour
 
     void OnClick()
     {
-        string player_name = GameObject.Find("InputField").GetComponent<InputName>().player_name;
+        string player_name = GlobeNickName.NickName;
 
         if (player_name.Length > 0)
         {
