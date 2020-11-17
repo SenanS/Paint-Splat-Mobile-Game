@@ -32,11 +32,8 @@ public class InputName : MonoBehaviour
     public void End_Value(string inp)
     {
 
-        //string NickNam = GlobeNickName.NickName;
-        //NickNam = inp;
-        GlobeNickName.NickName=inp;
+        GlobeNickName.NickName=inp;//find
         print("User Name:" + GlobeNickName.NickName);
-        //print(NickName);
 
     }
 

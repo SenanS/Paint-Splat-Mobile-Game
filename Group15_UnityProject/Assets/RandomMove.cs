@@ -36,7 +36,7 @@ public class RandomMove : NetworkBehaviour
     void Update()
     {
         timeCounter += Time.deltaTime;
-        if (timeCounter >= 15) {//Set Gamelast seconds 
+        if (timeCounter >= 120) {//Set Gamelast seconds 
             
             SceneManager.LoadScene("4.ResultSence");
         }
@@ -71,8 +71,8 @@ public class RandomMove : NetworkBehaviour
         //vel_y = Random.Range(1, 10);
         //stopTime = 0;
         //moveTime = 20;
-        vel_x = 0.5F;
-        vel_y = 0.5F;
+        vel_x = 5F;
+        vel_y = 5F;
     }
     //判断是否达到边界，达到边界则将速度改为负的
     void Check()
